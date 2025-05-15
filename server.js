@@ -19,8 +19,8 @@ app.post('/api/grades', async (req, res) => {
 
     try {
         const [quizData, reportData, examData] = await Promise.all([
-            axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Kısa Sınavlar!A:K?key=${API_KEY}`),
-            axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Raporlar!A:K?key=${API_KEY}`),
+            axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Kısa Sınavlar!A:M?key=${API_KEY}`),
+            axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Raporlar!A:M?key=${API_KEY}`),
             axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sınavlar!A:D?key=${API_KEY}`)
         ]);
 
